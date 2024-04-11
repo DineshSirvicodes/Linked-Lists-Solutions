@@ -25,3 +25,26 @@ Node *deleteLast(Node *list){
     temp->next = nullptr;
     return head;
 }
+// LEETCODE Solution 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        node->val = (node->next)->val;
+        node->next = node->next->next;
+        return;
+    }
+};
+
+// 4 -> 5 -> 1 - >9
+// so node->val = 5 , so node->next->val means node->next ie 5 will be 1
+// so 4->1->1->9
+// afte that node->next ie 1 at 2nd index will connect to node->next->next ie 9
+// so 4->1->9
