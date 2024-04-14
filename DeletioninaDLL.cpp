@@ -1,0 +1,81 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+    Node* back;
+
+    public:
+    Node(int data1,Node* next1, Node*back1){
+        data = data1;
+        next = next1;
+        back = back1;
+    }
+    
+    public:
+    Node(int data1){
+        data = data1;
+        next = nullptr;
+        back = nullptr;
+    }
+};
+
+Node* convertArr2DLL(vector<int> arr){
+    Node* head = new Node(arr[0]);
+    Node* prev = head;
+    for(int i = 1; i<arr.size(); i++){
+        Node* temp = new Node(arr[i],nullptr,prev);// firstly new node is created and the next pointer is null
+        // and previous pointer is prev initially pointing to head (backwards connection)
+        prev->next = temp; // prev->next which is initially at head is pointing to new node temp next (forwards connection)
+        prev = temp; // moving prev ahead to temp location
+        // again the temp creates new node within the loop
+    }
+    return head;
+}
+
+// Deletion of the head in a DLL
+Node* deletehead(Node* head){
+    if(head == NULL || head->next == NULL){ // head->next == null means ll has only one element
+            return NULL; // after deletion nothing remains
+    }
+    Node* prev = head;
+    head = head->next;
+    head->back = nullptr;
+    prev->next = nullptr;
+    delete prev;
+    return head;
+}
+// Deletion of the tail of the doubly Linked list
+Node* deleteTail(Node* head){
+    Node* tail = head;
+    while(tail->next != NULL){
+        tail = tail->next; // move tail till not null ie last element
+    }
+    Node* prev = tail->back; // tail's back connection
+    tail->back = nullptr; // tails back connection is null
+    prev->next = nullptr; // second last element connection to last is null
+    delete tail;
+    return head;
+}
+
+void print(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head = head->next;
+    }
+}
+
+int main(){
+    vector<int> arr;
+    arr.push_back(12);
+    arr.push_back(5);
+    arr.push_back(8);
+    arr.push_back(7);
+    Node* head = convertArr2DLL(arr);
+    //head = deletehead(head);
+    head = deleteTail(head);
+    print(head);
+    return 0;
+}
