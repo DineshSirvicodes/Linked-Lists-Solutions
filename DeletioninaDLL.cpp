@@ -47,7 +47,7 @@ Node* deletehead(Node* head){
     delete prev;
     return head;
 }
-// Deletion of the tail of the doubly Linked list
+
 Node* deleteTail(Node* head){
     Node* tail = head;
     while(tail->next != NULL){
@@ -58,6 +58,44 @@ Node* deleteTail(Node* head){
     prev->next = nullptr; // second last element connection to last is null
     delete tail;
     return head;
+}
+
+// Deletion of the kth element (given is position)
+Node* deleteKthElement(Node* head,int k){
+    if(head == NULL){
+        return NULL;
+    }
+    int cnt = 0;
+    Node* temp = head;
+    while(temp!=NULL){
+        cnt++;
+        if(cnt == k) break;
+        temp = temp->next; // till cnt == k temp will move ahead and cnt number and temp location will be same
+    }
+    Node* prev = temp->back;// will be one before temp
+    Node* front = temp->next;// will be one ahead of temp
+    // Case1(prev is NUll and front is null)
+    if(prev == NULL && front == NULL){ // single element 
+            delete temp;
+            return NULL;
+    }
+    // case 2 - ( only prev is null ) temp is at head 
+    else if(prev == NULL){
+        return deletehead(head);
+    }
+    // case 3 - (front is null ) temp is at last element
+    else if(front == NULL){
+        return deleteTail(head);
+    }
+    // case 4 - temp has both prev and front connections
+    else{
+        prev->next = front;
+        front->back = prev;
+        temp->next = nullptr;
+        temp->back  = nullptr;
+        delete temp;
+        return head;
+    }
 }
 
 void print(Node* head){
@@ -75,7 +113,8 @@ int main(){
     arr.push_back(7);
     Node* head = convertArr2DLL(arr);
     //head = deletehead(head);
-    head = deleteTail(head);
+   // head = deleteTail(head);
+    head = deleteKthElement(head,2);
     print(head);
     return 0;
 }
