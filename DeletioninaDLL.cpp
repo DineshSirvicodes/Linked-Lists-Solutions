@@ -47,7 +47,7 @@ Node* deletehead(Node* head){
     delete prev;
     return head;
 }
-
+// Deleting the Tail of the DLL
 Node* deleteTail(Node* head){
     Node* tail = head;
     while(tail->next != NULL){
