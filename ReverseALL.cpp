@@ -1,4 +1,4 @@
-// Brute Force Sol - TC - O(2N) , SC - O(N) , use of stack datastructure
+// Brute Force Sol - TC - O(2N) , SC - O(N) , use of stack to store the elements in a LIFO manner
 Node* reverseLinkedList(Node *head)
 {
     stack<int> st;
