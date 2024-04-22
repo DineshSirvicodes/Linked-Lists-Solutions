@@ -29,6 +29,6 @@ public:
                 return true; // loop detected
             }
         }
-        return false;
+        return false; // no loop detected
     }
 };
