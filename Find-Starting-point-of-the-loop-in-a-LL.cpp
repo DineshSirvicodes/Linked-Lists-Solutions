@@ -14,7 +14,7 @@ Node *firstNode(Node *head)
     }
     return NULL;
 }
-// Optimal SOl - Tortoise and Hare Pointer Sol
+// Optimal SOl - Tortoise and Hare Pointer Solution
 // Firstly move slow and fast pointers until they meet again at same node that means a loop is detected
 // Secondly move slow/fast , one of the pointer(slow to the head) and move slow and fast again by one step each till they meet again
 // that point will be the starting point of the loop
