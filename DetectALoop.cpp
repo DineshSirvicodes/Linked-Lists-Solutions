@@ -1,4 +1,4 @@
-// Brute Force Sol - TC - O(N * 2(logn/ 1) )- unordered-1) - O(N*2Logn) SC - O(N)
+// Brute Force Sol - TC - O(N * 2(logn/ 1) )- unordered-1) - O(N*2Logn) SC - O(N) 
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
@@ -16,6 +16,7 @@ public:
 };
 
 // Optimal SOl - TC - O(N) SC - O(1) Tortoise & Hare Pointer Algorithm
+// Tortoise- Slow moves by 1 , Hare - fast moves by 2
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
