@@ -1,4 +1,5 @@
 // Brute Force Sol - TC - O(2N) , SC - O(N) , use of stack to store the elements in a LIFO manner
+// stack puts the first element in itself , and is removed last while popping out the stack
 Node* reverseLinkedList(Node *head)
 {
     stack<int> st;
