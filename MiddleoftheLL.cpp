@@ -1,4 +1,4 @@
-// Brute force - TC - O(N+N/2) SC - O(1)
+// Brute force sol - TC - O(N+N/2) SC - O(1) , returns the middle of the LL by using the (n/2) + 1 method
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
