@@ -16,7 +16,7 @@ Node* reverseLinkedList(Node *head)
     }
     return head;
 }
-//Optimal Sol 1 - Swapping Links  Tc - O(N) SC - O(1)
+//Optimal Sol 1 - Swapping Links  Tc - O(N) SC - O(1), the links connecting to LL are reversed
 ListNode* reverseList(ListNode* head) {
         ListNode* temp = head;
         ListNode* prev = NULL;
