@@ -22,7 +22,7 @@ bool isPalindrome(ListNode* head) {
     }
 
 // Optimal sol - TC- O(2*N) - twice linkelist traversal - SC - O(1)
-// First using Tortoise and hare algo, find the node(slow) from where we compare the elements on reversal
+// First using Tortoise and hare algo, find the node(slow) from where we compare the elements on reversal- reversal will happen on slow->next
 // Second reverse the node from second->next till last, and compare the first and the newHead and move ahead
 // for even cases - fast should be moving till second last only cuz there are 2 midpoints, so only the first is considered
 // for odd cases the fast->next ie fast should be till last position, next will be null
