@@ -1,5 +1,5 @@
 // Brute force - used stack to store the elements and later compared the stack top with each element if they are same
-// TC - O(2*N) - we traversed two times, temp. node pointer
+// TC - O(2*N) - we traversed two times, temp. node pointer 2*N means traversal of temp
 // SC - O(N) - stack space
 bool isPalindrome(ListNode* head) {
         stack<int> st;
