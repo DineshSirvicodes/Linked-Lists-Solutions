@@ -58,6 +58,7 @@ class Solution
                 temp->data = 2;
                 cnttwo--;
             }
+            temp = temp->next;
         }
         return head;
     }
