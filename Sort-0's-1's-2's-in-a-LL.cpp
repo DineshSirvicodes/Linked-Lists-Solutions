@@ -23,7 +23,7 @@ class Solution
         
     }
 };
-// Brute Sol - TC- O(2N) SC - O(1)
+// Brute Sol - TC- O(2N) SC - O(1), count occurences of 0,1,2 and then minus each if found in traversal
 class Solution
 {
     public:
