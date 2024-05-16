@@ -1,5 +1,5 @@
 // TC - O(max(N1,N2)) , SC - O(max(N1,N2)) where N1 = l1->size and N2 = l2->size
-// we are only storing the values and not doing any operations
+// we are only storing the values and not doing any operations, so it would not be taken into consideration
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
