@@ -1,6 +1,6 @@
 //TC - O(N) Sc - O(1)
 void deleteAllOccurOfX(Node* head, int x) {
-        // Write your code here
+        
         Node* temp = head;
         while(temp!=NULL){
             if(temp->data == x){
