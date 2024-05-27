@@ -21,7 +21,7 @@ public:
         return ans;
     }
 };
-// Optimal SOl - Two pointers TC - O(N) Sc = O(1)
+// Optimal SOl - Two pointers TC - O(N) Sc - O(1)
 // Two pointers - left on head , right at the end of the DLL , tail
 // using the help of the given DLL, as it is sorted. 
 // Do left + right == target -> if left + right > target , decrease right,
