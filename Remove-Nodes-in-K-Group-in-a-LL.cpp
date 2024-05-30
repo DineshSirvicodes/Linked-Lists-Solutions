@@ -1,4 +1,4 @@
-// TC = O(2N) SC = O(1)
+// TC - O(2N) SC - O(1)
 // ReverseLL - O(N) , Finding KthNode -> O(N) = O(2N) , SC = O(1) , const
 // Idea to find KthGroup Node if it exists, then cut the LL into individual parts and reverse them
 // later connect this part to next , LL which will be also reverse and so onclass Solution {
