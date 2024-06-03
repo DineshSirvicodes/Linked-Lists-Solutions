@@ -24,7 +24,7 @@ public:
     }
     
     string back(int steps) {
-        while(steps){
+        while(steps){ // O(steps)
             if(currentPage->back){
                 currentPage = currentPage->back;
             }
@@ -35,7 +35,7 @@ public:
     }
     
     string forward(int steps) {
-        while(steps){
+        while(steps){ // O(steps)
             if(currentPage->next){
                 currentPage = currentPage->next;
             }
