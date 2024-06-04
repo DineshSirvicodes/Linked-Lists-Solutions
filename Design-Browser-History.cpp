@@ -1,4 +1,4 @@
-// LC Prob - 1472. Design Browser History
+// LeetCode Prob - 1472. Design Browser History
 class Node{
 public:
     string val;
