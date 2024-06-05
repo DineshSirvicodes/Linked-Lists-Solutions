@@ -1,4 +1,4 @@
-// Brute sol - use of hashmap TC = O(2N*1) where 2 while loops will take O(N) and map will take O(1) or O(logn) depending on the map used.
+// Brute sol - using a hashmap TC = O(2N*1) where 2 while loops will take O(N) and map will take O(1) or O(logn) depending on the map used.
 //SC - O(N) and O(N) for storing and returning the answer
 // we create a hashmap of <Node*,Node*> in which we store the original LL node's value as key and copying it to create a copy of the original node as value
 // we then traverse the LL and store the key(original LL) and value(copy LL) 
