@@ -1,4 +1,4 @@
-// Brute SOl - TC is nearly O(N^2) not exactly, SC = O(1)
+// Brute SOl - TC is nearly equal to O(N^2) not exactly, SC = O(1)
 // Simple traversal using two pointers and checking each pair if the sum is == target, also optimizing it using condition check
 // that is first + second <= sum then only move ahead , rather than iterating the entire DLL
 class Solution
